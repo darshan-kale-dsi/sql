@@ -121,16 +121,6 @@ CREATE TEMP TABLE IF NOT EXISTS sales_value AS
 	
 	GROUP BY md.market_date
 	
-	
-	
-	FROM market_date_info md
-	INNER JOIN customer_purchases cp
-		ON md.market_date = cp.market_date
-	INNER JOIN vendor v
-		ON cp.vendor_id = v.vendor_id
-	
-	GROUP BY cp.market_date, v.vendor_id
-
 
 DROP TABLE IF EXISTS best_or_worst_day
 CREATE TEMP TABLE IF NOT EXISTS best_or_worst_day AS
